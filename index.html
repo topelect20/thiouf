@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THIOUF — Grillades, Nguékhokh</title>
+    <meta name="description" content="THIOUF, grillades de la Petite Côte à Nguékhokh. Thiouf au feu de bois, thieboudienne et table ouverte." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#haut">THIOUF</a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu">Menu</button>
+      <nav id="nav">
+        <a href="#carte">La carte</a>
+        <a href="#maison">La maison</a>
+        <a href="#reserver">Réserver</a>
+        <a class="btn" href="#reserver">Une table</a>
+      </nav>
+    </header>
+
+    <main id="haut">
+      <section class="hero">
+        <img class="bg" src="images/hero.jpg" alt="Thiouf entier grillé sur la braise" />
+        <div class="shade"></div>
+        <div class="wrap copy">
+          <p class="kicker">Nguékhokh · Petite Côte</p>
+          <h1>Le poisson, au feu.</h1>
+          <p class="lede">Grillades du jour et thieboudienne, table ouverte sur la route de la côte. On sert quand la braise est prête.</p>
+          <div class="row">
+            <a class="btn" href="#carte">Voir la carte</a>
+            <a class="btn ghost" href="#reserver">Réserver une table</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts">
+        <div class="wrap">
+          <p>Route de la Petite Côte<br />Nguékhokh, Mbour</p>
+          <p>Feu allumé du mardi au dimanche. Lundi, porte close.</p>
+          <p>Poisson selon arrivage. Prévenez pour un groupe de plus de huit.</p>
+        </div>
+      </section>
+
+      <section class="paper" id="carte">
+        <div class="wrap">
+          <div class="paper-head">
+            <div>
+              <p class="kicker">La carte</p>
+              <h2>Ce qui sort du feu</h2>
+            </div>
+            <p>Le poisson change avec l’arrivage. Les prix sont en francs CFA, service compris.</p>
+          </div>
+          <div class="filters" id="filters"></div>
+          <div class="board" id="board"></div>
+        </div>
+      </section>
+
+      <section id="maison">
+        <div class="wrap maison">
+          <div>
+            <p class="kicker">La maison</p>
+            <h2>Un feu, pas une salle climatisée.</h2>
+            <p>THIOUF est né d’un gril posé à Nguékhokh, entre le marché et la route qui file vers Saly. On achète le thiof le matin, on le garde entier, et on ne le met au feu que lorsque la table est là.</p>
+            <p>La terrasse est ouverte. Le midi, la marmite. Le soir, surtout la braise. L’attaya se sert si vous ne partez pas tout de suite.</p>
+          </div>
+          <div class="shots">
+            <img class="wide" src="images/thieb.jpg" alt="Thieboudienne rouge" />
+            <div class="pair">
+              <img class="sq" src="images/crevettes.jpg" alt="Crevettes grillées" />
+              <img class="sq" src="images/pastels.jpg" alt="Pastels, bissap et café Touba" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hours">
+        <div class="wrap">
+          <img src="images/braise.jpg" alt="Braises sous le gril" />
+          <ul>
+            <li><span>Mardi — Jeudi</span><span>12h–15h · 19h–23h</span></li>
+            <li><span>Vendredi — Dimanche</span><span>12h–23h, service continu</span></li>
+            <li><span>Lundi</span><span>Fermé — le feu se repose</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reserve" id="reserver">
+        <div class="wrap">
+          <div>
+            <p class="kicker">La table</p>
+            <h2>Réserver</h2>
+            <p>Le soir, le feu part vers 19h. La demande part sur WhatsApp du restaurant.</p>
+            <img src="images/terrasse.jpg" alt="Terrasse de THIOUF à la tombée du jour" />
+          </div>
+          <form id="form">
+            <label>Nom<input name="name" autocomplete="name" required /></label>
+            <label>Téléphone<input name="phone" inputmode="tel" autocomplete="tel" required /></label>
+            <div class="pair-fields">
+              <label>Date<input name="date" type="date" required /></label>
+              <label>Heure<input name="time" type="time" value="20:00" required /></label>
+            </div>
+            <label>Couverts<input name="covers" type="number" min="1" max="16" value="2" required /></label>
+            <label>Note<textarea name="note" rows="3" placeholder="Anniversaire, sans piment, terrasse…"></textarea></label>
+            <p class="err" id="err" hidden></p>
+            <p class="ok" id="ok" hidden></p>
+            <button class="btn" type="submit">Envoyer sur WhatsApp</button>
+            <p>Ligne du restaurant : +221 77 555 01 90</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>
+          <strong style="font-family: var(--display); font-size: 1.8rem; font-weight: 500">THIOUF</strong>
+          <p>Route de la Petite Côte, Nguékhokh, Mbour</p>
+        </div>
+        <div>
+          <a href="tel:+221775550190">+221 77 555 01 90</a>
+          <p><a href="https://maps.google.com/?q=Nguékhokh+Sénégal">Itinéraire</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
